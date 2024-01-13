@@ -9,6 +9,8 @@ import UIKit
 
 class UserVC: UIViewController {
     
+    private let userVM : UserViewModel
+    
     private let nameLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,12 +36,21 @@ class UserVC: UIViewController {
 
         return label
     }()
-
+    
+    init(userVM: UserViewModel) {
+        self.userVM = userVM
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupViews()
-        FetchUser()
+        
     }
 
     
@@ -72,6 +83,8 @@ class UserVC: UIViewController {
         email.text = "email"
     }
     
+    
+    /*
     private func FetchUser() {
         APIManager.shared.fetchUser { res in
             switch res {
@@ -87,6 +100,7 @@ class UserVC: UIViewController {
             
         }
     }
+     */
 
 }
 

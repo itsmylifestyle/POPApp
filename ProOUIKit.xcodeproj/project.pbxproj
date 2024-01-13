@@ -17,6 +17,8 @@
 		A71E5EED2B52979000F0AC06 /* ProOUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E5EEC2B52979000F0AC06 /* ProOUIKitUITestsLaunchTests.swift */; };
 		A71E5EFD2B52A0BD00F0AC06 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E5EFC2B52A0BD00F0AC06 /* user.swift */; };
 		A71E5EFF2B52A12900F0AC06 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E5EFE2B52A12900F0AC06 /* APIManager.swift */; };
+		A71E5F022B52A7DB00F0AC06 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E5F012B52A7DB00F0AC06 /* UserViewModel.swift */; };
+		A71E5F042B52A8F900F0AC06 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E5F032B52A8F800F0AC06 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		A71E5EEC2B52979000F0AC06 /* ProOUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProOUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A71E5EFC2B52A0BD00F0AC06 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		A71E5EFE2B52A12900F0AC06 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		A71E5F012B52A7DB00F0AC06 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A71E5F032B52A8F800F0AC06 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		A71E5EC82B52978F00F0AC06 /* ProOUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A71E5F002B52A7AF00F0AC06 /* ViewModel */,
 				A71E5EFB2B52A09200F0AC06 /* Model */,
 				A71E5EFA2B52A04500F0AC06 /* Service */,
 				A71E5EF92B52A03500F0AC06 /* View */,
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A71E5EFE2B52A12900F0AC06 /* APIManager.swift */,
+				A71E5F032B52A8F800F0AC06 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -152,6 +158,14 @@
 				A71E5EFC2B52A0BD00F0AC06 /* user.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A71E5F002B52A7AF00F0AC06 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A71E5F012B52A7DB00F0AC06 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71E5F042B52A8F900F0AC06 /* UserService.swift in Sources */,
 				A71E5EFD2B52A0BD00F0AC06 /* user.swift in Sources */,
+				A71E5F022B52A7DB00F0AC06 /* UserViewModel.swift in Sources */,
 				A71E5ECE2B52978F00F0AC06 /* UserVC.swift in Sources */,
 				A71E5EFF2B52A12900F0AC06 /* APIManager.swift in Sources */,
 				A71E5ECA2B52978F00F0AC06 /* AppDelegate.swift in Sources */,
