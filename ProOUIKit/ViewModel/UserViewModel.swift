@@ -9,6 +9,7 @@ import Foundation
 
 class UserViewModel {
     
+    weak var output : UserViewModelOutput?
     private let userService : UserService
     
     init(userService: UserService) {
@@ -16,12 +17,12 @@ class UserViewModel {
     }
     
     func fetchUsers() {
-        userService.fetchUser { res in
+        userService.fetchUser { [weak self] res in
             switch res {
             case .success(let user):
-                print(user)
+                self?.output?.updateView(name: user.name, email: user.email, username: user.username)
             case.failure(_):
-                print("error")
+                self?.output?.updateView(name: "No user found", email: "", username: "")
             }
         }
     }

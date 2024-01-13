@@ -7,7 +7,13 @@
 
 import UIKit
 
-class UserVC: UIViewController {
+class UserVC: UIViewController, UserViewModelOutput {
+    func updateView(name: String, email: String, username: String) {
+        self.nameLabel.text = name
+        self.username.text = username
+        self.email.text = email
+    }
+    
     
     private let userVM : UserViewModel
     
@@ -40,6 +46,7 @@ class UserVC: UIViewController {
     init(userVM: UserViewModel) {
         self.userVM = userVM
         super.init(nibName: nil, bundle: nil)
+        self.userVM.output = self
     }
     
     required init?(coder: NSCoder) {
@@ -50,12 +57,13 @@ class UserVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupViews()
+        userVM.fetchUsers()
         
     }
 
     
     private func setupViews() {
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .white
         view.addSubview(email)
         view.addSubview(username)
         view.addSubview(nameLabel)
